@@ -14,6 +14,7 @@ import { DataTableConfigService } from '../../services/data-table-config.service
 import { DataTableEventStateService } from '../../services/data-table-event.service';
 import { ViewPosition } from '../../../utility/models/view-position.model';
 import { DataTableDataStateService } from '../../services/data-table-data-state.service';
+import { DataTableFilterOption } from '../../models/data-table-filter-option.model';
 
 /**
  * Data table column component. Data table columns associated data is captured via this component.
@@ -193,6 +194,12 @@ export class DataTableColumnComponent implements OnInit, OnDestroy {
    */
   @Input()
   public showDropdownFilter: boolean;
+
+  /**
+   * Show dropdown filter if true. Filter data using dropdown filter.
+   */
+  @Input()
+  public dropdownFilterItems: Array<DataTableFilterOption>;
 
   /**
    * Dropdown filter menu position. Placement of filter popup menu.

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 
 import { Observable, Subject, Subscription } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
@@ -22,7 +22,7 @@ import { DataTableScrollPoint } from '../../../data-table/models/data-table-scro
   selector: 'ng-data-table-column-filter-template',
   templateUrl: './data-table-column-filter-template.component.html'
 })
-export class DataTableColumnFilterTemplateComponent implements OnInit, OnDestroy {
+export class DataTableColumnFilterTemplateComponent implements OnInit, OnChanges, OnDestroy {
   @Input()
   public column: DataTableColumnComponent;
 
@@ -47,7 +47,8 @@ export class DataTableColumnFilterTemplateComponent implements OnInit, OnDestroy
     public dataStateService: DataTableDataStateService,
     private eventStateService: DataTableEventStateService,
     private scrollPositionService: DataTableScrollPositionService
-  ) {}
+  ) {
+  }
 
   /**
    * Component initialize lifecycle event.
@@ -62,6 +63,28 @@ export class DataTableColumnFilterTemplateComponent implements OnInit, OnDestroy
         });
 
       if (this.dataStateService.onFilterValueExtract) {
+        if (this.column.dropdownFilterItems && this.column.dropdownFilterItems.length > 0) {
+          setTimeout(() => this.filterDataStream.next(this.column.dropdownFilterItems), 0); // TODO: remove the timeout
+        } else {
+          this.fetchFilterOptionsStreamSubscription = this.eventStateService.fetchFilterOptionsStream
+            .pipe(
+              switchMap(() => {
+                return this.dataStateService.onFilterValueExtract(this.column);
+              })
+            )
+            .subscribe((options: DataTableFilterOption[]) => {
+              setTimeout(() => this.filterDataStream.next(options), 0); // TODO: remove the timeout
+            });
+        }
+      }
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.dataStateService.onFilterValueExtract) {
+      if (this.column.dropdownFilterItems && this.column.dropdownFilterItems.length > 0) {
+        setTimeout(() => this.filterDataStream.next(this.column.dropdownFilterItems), 0); // TODO: remove the timeout
+      } else {
         this.fetchFilterOptionsStreamSubscription = this.eventStateService.fetchFilterOptionsStream
           .pipe(
             switchMap(() => {
