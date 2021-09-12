@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CustomTestingComponent } from './testing/custom-testing/custom-testing.component';
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../../shared/shared.module';
+import { DataTableModule } from 'ornamentum';
 
 /**
  * Represent application data table feature module routes.
@@ -57,6 +61,10 @@ const dataTableFeatureRoutes: Routes = [
     // loadChildren: () => import('./experimental/data-table-experimental.module')
     //   .then((m) => m.DataTableExperimentalModule),
     path: 'experimental'
+  },
+  {
+    path: 'testing',
+    component: CustomTestingComponent
   }
 ];
 
@@ -65,7 +73,12 @@ const dataTableFeatureRoutes: Routes = [
  */
 @NgModule({
   exports: [RouterModule],
-  imports: [RouterModule.forChild(dataTableFeatureRoutes)]
+  imports: [
+    RouterModule.forChild(dataTableFeatureRoutes),
+    FormsModule,
+    SharedModule.forRoot(),
+    DataTableModule.forRoot()
+  ]
 })
 export class DataTableFeatureRoutingModule {
 }

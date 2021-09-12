@@ -6,4 +6,4 @@ export { ExpandOnRowClickUsageComponent } from './components/example/expand-on-r
 // tslint:disable-next-line
 export { ShowRowExpandLoadingSpinnerUsageComponent } from './components/example/show-row-expand-loading-spinner-usage/show-row-expand-loading-spinner-usage.component';
 // tslint:disable-next-line
-export { ShowRowExpandLoadingSpinnerDetailViewComponent } from './components/example/show-row-expand-loading-spinner-usage/show-row-expand-loading-spinner-detail-view/show-row-expand-loading-spinner-detail-view.component';
+// export { ShowRowExpandLoadingSpinnerDetailViewComponent } from './components/example/show-row-expand-loading-spinner-usage/show-row-expand-loading-spinner-detail-view/show-row-expand-loading-spinner-detail-view.component';

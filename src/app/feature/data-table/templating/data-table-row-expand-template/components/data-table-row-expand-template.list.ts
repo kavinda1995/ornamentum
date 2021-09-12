@@ -71,18 +71,18 @@ export const showRowExpandLoadingSpinnerUsage: ExampleFile[] = [
 ];
 
 export const showRowExpandLoadingSpinnerDetailView: ExampleFile[] = [
-  {
-    type: FileType.TS,
-    name: 'show-row-expand-loading-spinner-detail-view.component.ts',
-    content: require('!!raw-loader!./example/show-row-expand-loading-spinner-usage/show-row-expand-loading-spinner-detail-view/' +
-      'show-row-expand-loading-spinner-detail-view.component.ts')
-  },
-  {
-    type: FileType.HTML,
-    name: 'show-row-expand-loading-spinner-detail-view.component.html',
-    content: require('!!raw-loader!./example/show-row-expand-loading-spinner-usage/show-row-expand-loading-spinner-detail-view/' +
-      'show-row-expand-loading-spinner-detail-view.component.html')
-  }
+  // {
+  //   type: FileType.TS,
+  //   name: 'show-row-expand-loading-spinner-detail-view.component.ts',
+  //   content: require('!!raw-loader!./example/show-row-expand-loading-spinner-usage/show-row-expand-loading-spinner-detail-view/' +
+  //     'show-row-expand-loading-spinner-detail-view.component.ts')
+  // },
+  // {
+  //   type: FileType.HTML,
+  //   name: 'show-row-expand-loading-spinner-detail-view.component.html',
+  //   content: require('!!raw-loader!./example/show-row-expand-loading-spinner-usage/show-row-expand-loading-spinner-detail-view/' +
+  //     'show-row-expand-loading-spinner-detail-view.component.html')
+  // }
 ];
 
 export const demoSnippet: any = {

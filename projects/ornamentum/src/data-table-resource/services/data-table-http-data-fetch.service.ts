@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 import { DataTableRequestParams } from '../../data-table/models/data-table-request-params.model';
 import { DataTableQueryResult } from '../../data-table/models/data-table-query-result.model';

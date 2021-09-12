@@ -1,0 +1,62 @@
+<ng-data-table
+  [id]="'sales_products_custom_testing'"
+  [title]="'Sales Products'"
+  [selectTrackBy]="'id'"
+  [minContentWidth]="1280"
+  [items]="items"
+  [limit]="5"
+  [pageable]="true"
+  [showRefreshButton]='true'
+  [showHeader]="true"
+  [showColumnSelector]="true"
+  [rowSelectable]="true">
+  <ng-data-table-column
+    [field]="'id'"
+    [title]="'ID'"
+    [filterable]='true'
+    [width]="90">
+  </ng-data-table-column>
+  <ng-data-table-column
+    [field]="'orderMethodType'"
+    [title]="'Order Method Type'"
+    [filterable]='true'
+    [width]="150">
+  </ng-data-table-column>
+  <ng-data-table-column
+    [field]="'retailerType'"
+    [title]="'Retailer Type'"
+    [filterable]='true'
+    [width]="120">
+  </ng-data-table-column>
+  <ng-data-table-column
+    [field]="'productLine'"
+    [title]="'Product Line'"
+    [showDropdownFilter]='true'
+    [filterable]='true'
+    [width]="180">
+  </ng-data-table-column>
+  <ng-data-table-column
+    [field]="'productType'"
+    [title]="'Product Type'"
+    [filterable]='true'
+    [width]="160">
+  </ng-data-table-column>
+  <ng-data-table-column
+    [field]="'revenue'"
+    [title]="'Revenue'"
+    [filterable]='true'
+    [width]="150">
+  </ng-data-table-column>
+  <ng-data-table-column
+    [field]="'quantity'"
+    [title]="'Quantity'"
+    [filterable]='true'
+    [width]="120">
+  </ng-data-table-column>
+  <ng-data-table-column
+    [field]="'grossMargin'"
+    [title]="'Gross Margin'"
+    [filterable]='true'
+    [width]="150">
+  </ng-data-table-column>
+</ng-data-table>

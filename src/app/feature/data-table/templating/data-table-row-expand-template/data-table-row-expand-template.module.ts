@@ -13,7 +13,6 @@ import {
   RowExpandTemplateUsageComponent,
   RowExpandTemplateDetailViewComponent,
   ShowRowExpandLoadingSpinnerUsageComponent,
-  ShowRowExpandLoadingSpinnerDetailViewComponent,
   ExpandOnRowClickUsageComponent,
 } from './index';
 
@@ -26,8 +25,7 @@ import {
     RowExpandTemplateUsageComponent,
     RowExpandTemplateDetailViewComponent,
     ExpandOnRowClickUsageComponent,
-    ShowRowExpandLoadingSpinnerUsageComponent,
-    ShowRowExpandLoadingSpinnerDetailViewComponent
+    ShowRowExpandLoadingSpinnerUsageComponent
   ],
   exports: [],
   imports: [
