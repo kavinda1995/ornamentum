@@ -218,6 +218,10 @@
               background: $aegean-theme-color;
             }
 
+            &.ust-theme {
+              background-color: rgb(var(--custom-orange));
+            }
+
             &::before {
               background: $theme-selector-background;
               border-radius: 2px;

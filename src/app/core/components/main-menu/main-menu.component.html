@@ -40,6 +40,11 @@
                   <span class="aegean-theme"></span>
                 </a>
               </div>
+              <div class="themes-selector" [class.selected]="isSelectedTheme(Theme.ust)">
+                <a (click)="onThemeChange(Theme.ust)" title="UST Theme">
+                  <span class="ust-theme"></span>
+                </a>
+              </div>
             </div>
           </span>
         </div>

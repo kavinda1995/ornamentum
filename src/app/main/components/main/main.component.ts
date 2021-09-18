@@ -15,7 +15,7 @@ import { ScrollService } from '../../../core/services';
   templateUrl: './main.component.html'
 })
 export class MainComponent {
-  public themeCssClass: string = Theme.dark;
+  public themeCssClass: string = Theme.ust;
   public menuGroups: MenuGroup[] = [
     {
       expanded: true,

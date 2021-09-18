@@ -1,5 +1,9 @@
 // Global style dependencies required for example
 
+// UST variables
+@import "assets/ust-styles/common";
+@import 'assets/ust-styles/css-variables';
+
 @import 'app/styles/variables';
 @import 'app/styles/mixins';
 
@@ -26,6 +30,10 @@
 .om-aegean-theme {
   @import '../dist/ornamentum/themes/aegean.theme';
   @import '../dist/ornamentum/themes/addon.aegean.theme';
+}
+
+.om-ust-theme {
+  @import '../dist/ornamentum/themes/ust.theme';
 }
 
 body {

@@ -31,6 +31,7 @@
     "build:lib:scss:copy": "cpx \"./projects/ornamentum/src/styles/**/*\"  \"./dist/ornamentum\"",
     "build:lib:dev": "ng build ornamentum && npm run build:lib:scss && npm run build:lib:scss:copy",
     "build:lib:prod": "ng build ornamentum --prod && npm run build:lib:scss && npm run build:lib:scss:copy",
+    "build:lib:watch": "ng build ornamentum --watch",
     "docs:lib": "compodoc -p projects/ornamentum/tsconfig.doc.json -d dist/ornamentum-demo/browser/api-docs -n 'Ornamentum' --customFavicon 'src/assets/favicon/favicon.ico' --assetsFolder 'src/assets/docs' --disableCoverage --disablePrivate --disableInternal --disableProtected",
     "clean:dist": "rimraf dist",
     "lint": "npm run lint:demo && npm run lint:lib",
